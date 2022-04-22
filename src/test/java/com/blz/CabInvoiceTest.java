@@ -26,4 +26,16 @@ public class CabInvoiceTest {
         Assert.assertEquals(5, fare, 0.0);
     }
 
+    //Step 2 - Multiple Rides
+
+    //tc3 for Calculate total fare for Multiple Rides
+    @Test
+    public void givenMultipleRides_ShouldReturnTotalFare() {
+        InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
+        Ride[] rides = { new Ride(2.0, 5),
+                new Ride(0.1, 1) };
+        double fare = invoiceGenerator.calculateFare(rides);
+        Assert.assertEquals(62.1, fare, 0.0);
+    }
+
 }
