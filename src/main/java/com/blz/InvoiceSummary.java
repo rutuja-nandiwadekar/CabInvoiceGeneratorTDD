@@ -21,4 +21,5 @@ public class InvoiceSummary {
                 Double.compare(that.totalFare, totalFare) == 0;
     }
 
+
 }
